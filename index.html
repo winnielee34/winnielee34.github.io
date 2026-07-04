@@ -3,42 +3,261 @@
 <head>
   <meta charset="UTF-8">
     <title>Winnie Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Winnie Lee</h1>
-  <h2>iOS Software Engineer</h2>
+  <header class="hero">
+    <img class="profile-photo" src="ys1996.jpg" alt="Portrait of Winnie Lee">
+    <h1>Winnie Lee</h1>
+    <h2>iOS Software Engineer | Swift &bull; Objective-C | SDK Development<br>5+ Years Experience</h2>
+  </header>
 
-  <p>
-    I am an iOS Software Engineer with 5+ years of experience building native iOS applications,
-    SDKs, indoor navigation features, and parking payment management apps.
-  </p>
+  <main>
+    <p class="greeting">Hello, and welcome to my portfolio.</p>
 
-  <h2>Projects</h2>
+    <p>
+      I am an iOS Software Engineer with 5+ years of experience building native iOS applications,
+      reusable SDKs, indoor navigation solutions, parking payment management systems, fintech
+      applications with blockchain integration, and engaging user interfaces. I specialize in
+      developing high-quality iOS experiences using Swift and Objective-C.
+    </p>
 
-  <h3>Indoor Navigation SDK</h3>
-  <p>
-    Built indoor map rendering, floor switching, route display, and location-related features
-    using Swift, Objective-C, UIKit, MapKit, and CoreLocation.
-  </p>
+    <h2 class="section-title">Projects</h2>
 
-  <h3>Parking Payment Management App</h3>
-  <p>
-    Developed parking payment, member data management, indoor map display, and API integration features.
-  </p>
+    <h3 class="project-title">LuckyParking</h3>
+    <p>
+      Smart parking management and payment app available on the App Store, currently being optimized
+      with ongoing API integration.
+    </p>
+    <div class="project-gallery" aria-label="Indoor Navigation App screenshots">
+      <img data-screenshot="1" data-note-target="screenshots-1-2" src="assets/indoor-navigation-1.png" alt="Indoor Navigation App parking detail map screen" tabindex="0">
+      <img data-screenshot="2" data-note-target="screenshots-1-2" src="assets/indoor-navigation-2.png" alt="Indoor Navigation App parking information screen" tabindex="0">
+      <img data-screenshot="3" data-note-target="screenshots-3-4" src="assets/indoor-navigation-3.png" alt="Indoor Navigation App filter options screen" tabindex="0">
+      <img data-screenshot="4" data-note-target="screenshots-3-4" src="assets/indoor-navigation-4.png" alt="Indoor Navigation App map overview screen" tabindex="0">
+      <img data-screenshot="5" data-note-target="screenshot-5" src="assets/indoor-navigation-5.png" alt="Indoor Navigation App parking record screen" tabindex="0">
+      <img data-screenshot="6" data-note-target="screenshot-6" src="assets/indoor-navigation-6.png" alt="Indoor Navigation App payment method screen" tabindex="0">
+      <img data-screenshot="7" data-note-target="screenshot-7" src="assets/indoor-navigation-7.png" alt="Indoor Navigation App payment form screen" tabindex="0">
+      <img data-screenshot="8" data-note-target="screenshot-8" src="assets/indoor-navigation-8.png" alt="Indoor Navigation App web payment screen" tabindex="0">
+      <img data-screenshot="9" data-note-target="screenshots-9-10" src="assets/indoor-navigation-9.png" alt="LuckyParking account settings screen" tabindex="0">
+      <img data-screenshot="10" data-note-target="screenshots-9-10" src="assets/indoor-navigation-10.png" alt="LuckyParking license plate management screen" tabindex="0">
+    </div>
+    <div class="project-notes">
+      <h4>Applied Technologies</h4>
+      <div class="project-note" data-note-id="screenshots-1-2">
+        <p class="note-label">Screenshots 1-2</p>
+        <p>
+          Implemented Google Maps with custom pins and parking information from server-side JSON.
+          Decoded API responses and updated the UI asynchronously with DispatchQueue. Image loading
+          also runs asynchronously to prevent UI blocking, and an animated scroll-up card improves
+          the user experience.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="screenshots-3-4">
+        <p class="note-label">Screenshots 3-4</p>
+        <p>
+          Stored JSON data returned from the server and used a hashmap-based approach to implement
+          filtering logic, then updated the UI.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="screenshot-5">
+        <p class="note-label">Screenshot 5</p>
+        <p>
+          Built parking records in a compact card layout. Stored JSON response data locally and
+          reused local data on the next launch to reduce unnecessary API calls.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="screenshot-6">
+        <p class="note-label">Screenshot 6</p>
+        <p>
+          Built the payment page with asynchronous image loading to prevent UI blocking and improve
+          the user experience. Added encrypted local storage for user information and real-time
+          server updates.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="screenshot-7">
+        <p class="note-label">Screenshot 7</p>
+        <p>
+          Built the payment detail input page with a preserved ViewController stack, allowing users
+          to return to the previous page with a direct pop operation. Input values can be saved to
+          the account file and reused as defaults on the next payment flow, reducing repeated user
+          input while still allowing users to choose whether to save the information as default.
+        </p>
+        <button class="demo-button" type="button" data-open-video data-video-src="assets/luckyparking-payment-detail-demo.mp4">&#9654; View Demo Video</button>
+      </div>
+      <div class="project-note" data-note-id="screenshot-8">
+        <p class="note-label">Screenshot 8</p>
+        <p>
+          Implemented the external web payment flow by reading WebKit responses and handling the
+          return path back into the app, reopening the app and navigating users to the correct
+          ViewController after payment.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="screenshots-9-10">
+        <p class="note-label">Screenshots 9-10</p>
+        <p>
+          Built the account management pages with locally stored profile data to avoid excessive
+          API calls. Server updates are triggered only after each edit, so the API can sync changed
+          data back to the server. The flow supports storing multiple license plate numbers and
+          selecting a default plate for the next payment. Email, tax ID, and carrier information
+          follow the same local storage and selective sync approach.
+        </p>
+      </div>
+    </div>
 
-  <h3>Zoo Map & Live Event App</h3>
-  <p>
-    Built map-based user experiences and event-related features for a zoo application.
-  </p>
+    <h3 class="project-title">Hanshin Parking SDK</h3>
+    <p>
+      Client-requested SDK focused only on indoor map navigation and route display features.
+    </p>
+    <div class="project-gallery" aria-label="Hanshin Parking SDK screenshots">
+      <img data-note-target="hanshin-screen-shot-1" src="assets/hanshin-parking-1.png" alt="Hanshin Parking SDK indoor route overview screen" tabindex="0">
+      <img data-note-target="hanshin-screen-shot-2" src="assets/hanshin-parking-2.png" alt="Hanshin Parking SDK current location and destination pin screen" tabindex="0">
+    </div>
+    <div class="project-notes">
+      <h4>Applied Technologies</h4>
+      <div class="project-note" data-note-id="hanshin-screen-shot-1">
+        <p class="note-label">Screen shot 1</p>
+        <p>
+          Presented the search result view after the SDK loaded search data. The blue line is an
+          offline-generated route returned from IPSSDK. I decoded the returned data, generated the
+          route, and displayed it in the UI.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="hanshin-screen-shot-2">
+        <p class="note-label">Screen shot 2</p>
+        <p>
+          Displayed the current location and destination pins on a zoomed indoor parking map, with
+          the blue line representing the navigation route between the two points. Implemented
+          automatic floor switching, automatic location following, and automatic navigation-end
+          detection.
+        </p>
+      </div>
+      <button class="demo-button" type="button" data-open-video data-video-src="assets/hanshin-parking-demo.mp4">&#9654; View Demo Video</button>
+    </div>
 
-  <h2>Skills</h2>
-  <p>
-    Swift, Objective-C, UIKit, SwiftUI, MapKit, CoreLocation, URLSession, REST APIs, Git, MVVM
-  </p>
+    <h3 class="project-title">ShouShanZoo App</h3>
+    <p>
+      Built map-based user experiences and event-related features for a zoo outdoor navigating application.
+    </p>
+    <div class="project-gallery" aria-label="ShouShanZoo App screenshots">
+      <img data-note-target="shoushanzoo-screenshots-1-2" src="assets/shoushanzoo-1.png" alt="ShouShanZoo App launch screen" tabindex="0">
+      <img data-note-target="shoushanzoo-screenshots-1-2" src="assets/shoushanzoo-2.png" alt="ShouShanZoo App visitor rules screen" tabindex="0">
+      <img data-note-target="shoushanzoo-screenshot-3" src="assets/shoushanzoo-3.png" alt="ShouShanZoo App activity list screen" tabindex="0">
+      <img data-note-target="shoushanzoo-screenshot-4" src="assets/shoushanzoo-4.png" alt="ShouShanZoo App outdoor map navigation screen" tabindex="0">
+      <img data-note-target="shoushanzoo-screenshot-5" src="assets/shoushanzoo-5.png" alt="ShouShanZoo App account management screen" tabindex="0">
+    </div>
+    <div class="project-notes">
+      <h4>Applied Technologies</h4>
+      <div class="project-note" data-note-id="shoushanzoo-screenshots-1-2">
+        <p class="note-label">Screenshots 1-2</p>
+        <p>
+          Built the loading flow to verify network availability before the app continues. If no
+          network connection is available, the app shows a no-network prompt. The popup in screenshot
+          2 displays subscription content received through push notification.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="shoushanzoo-screenshot-3">
+        <p class="note-label">Screenshot 3</p>
+        <p>
+          Built the activity page with web-based interactions. Commands from the web content are
+          passed back to the app through WebKit.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="shoushanzoo-screenshot-4">
+        <p class="note-label">Screenshot 4</p>
+        <p>
+          Built the outdoor navigation map and generated routes when location status is available.
+        </p>
+      </div>
+      <div class="project-note" data-note-id="shoushanzoo-screenshot-5">
+        <p class="note-label">Screenshot 5</p>
+        <p>
+          Built the personal account page with encrypted data storage for saved user information.
+        </p>
+      </div>
+      <button class="demo-button" type="button" data-open-video data-video-src="assets/shoushanzoo-demo.mp4">&#9654; View Demo Video</button>
+    </div>
 
-  <h2>Contact</h2>
-  <p>Email: winnielee9634@gmail.com</p>
-  <p>LinkedIn: https://www.linkedin.com/in/winnie-lee-88627416b/</p>
+    <h2 class="section-title">Skills</h2>
+    <p>
+      Swift, Objective-C, UIKit, SwiftUI, MapKit, Google Maps SDK, CoreLocation, WebKit,
+      URLSession, REST APIs, JSON Decoding, DispatchQueue, Asynchronous Image Loading,
+      Push Notifications, Local Data Persistence, Encrypted Local Storage, SDK Development,
+      Indoor Navigation, Outdoor Navigation, Route Rendering, API Integration, Git, MVVM
+    </p>
+
+    <h2 class="section-title">Contact</h2>
+    <p>Email: winnielee9634@gmail.com</p>
+    <p>LinkedIn: https://www.linkedin.com/in/winnie-lee-88627416b/</p>
+  </main>
+  <div class="video-modal" data-video-modal aria-hidden="true">
+    <div class="video-modal-backdrop" data-close-video></div>
+    <div class="video-dialog" role="dialog" aria-modal="true" aria-label="LuckyParking demo video">
+      <button class="video-close" type="button" aria-label="Close demo video" data-close-video>&times;</button>
+      <video controls preload="metadata">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll("[data-note-target]").forEach((screenshot) => {
+      const showRelatedNote = () => {
+        const note = document.querySelector(`[data-note-id="${screenshot.dataset.noteTarget}"]`);
+
+        if (!note) {
+          return;
+        }
+
+        document.querySelectorAll(".project-note.is-active").forEach((activeNote) => {
+          activeNote.classList.remove("is-active");
+        });
+
+        note.classList.add("is-active");
+        note.scrollIntoView({ behavior: "smooth", block: "center" });
+      };
+
+      screenshot.addEventListener("click", showRelatedNote);
+      screenshot.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          showRelatedNote();
+        }
+      });
+    });
+
+    const videoModal = document.querySelector("[data-video-modal]");
+    const video = videoModal.querySelector("video");
+
+    document.querySelectorAll("[data-open-video]").forEach((openControl) => {
+      openControl.addEventListener("click", () => {
+        video.setAttribute("src", openControl.dataset.videoSrc);
+        video.load();
+        videoModal.classList.add("is-open");
+        videoModal.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    document.querySelectorAll("[data-close-video]").forEach((closeControl) => {
+      closeControl.addEventListener("click", () => {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+        videoModal.classList.remove("is-open");
+        videoModal.setAttribute("aria-hidden", "true");
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && videoModal.classList.contains("is-open")) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+        videoModal.classList.remove("is-open");
+        videoModal.setAttribute("aria-hidden", "true");
+      }
+    });
+  </script>
 </body>
 </html>

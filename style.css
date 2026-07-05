@@ -3,6 +3,18 @@ body {
     margin: 0;
     color: #1f2933;
     background: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #2f6f9f;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+a:hover,
+a:focus {
+    color: #1e5f8b;
 }
 
 .hero {
@@ -161,6 +173,24 @@ main {
 .demo-button:hover,
 .demo-button:focus {
     background: #1f76bd;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 8px 12px;
+    border: 1px solid #d7e1ea;
+    border-radius: 999px;
+    color: #334e68;
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(31, 41, 51, 0.06);
 }
 
 .video-modal {
